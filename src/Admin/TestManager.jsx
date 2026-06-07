@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getTests, addTest, updateTest, deleteTest, addQuestion, updateQuestion, deleteQuestion } from '../utils/dbApi';
+import WordTestUpload from './WordTestUpload';
 import './admin.scss';
 
 const TestManager = () => {
@@ -7,6 +8,7 @@ const TestManager = () => {
   const [loading, setLoading] = useState(true);
   const [showTestModal, setShowTestModal] = useState(false);
   const [showQuestionModal, setShowQuestionModal] = useState(false);
+  const [showWordUpload, setShowWordUpload] = useState(false);
   const [editingTestId, setEditingTestId] = useState(null);
   const [selectedTest, setSelectedTest] = useState(null);
   const [editingQuestionId, setEditingQuestionId] = useState(null);
@@ -22,7 +24,7 @@ const TestManager = () => {
 
   const [questionFormData, setQuestionFormData] = useState({
     text: '',
-    type: 'multiple', // multiple, truefalse, essay
+    type: 'multiple',
     points: 1,
     options: ['', '', '', ''],
     correctAnswer: 0
@@ -193,6 +195,17 @@ const TestManager = () => {
     }
   };
 
+  const handleWordUploadSuccess = (testData) => {
+    try {
+      addTest(testData);
+      loadTests();
+      setShowWordUpload(false);
+      alert('Test Word fayldan muvaffaqiyatli yaratildi!');
+    } catch (error) {
+      alert(`Xato: ${error.message}`);
+    }
+  };
+
   const filteredTests = tests.filter(test => {
     const matchesSearch = test.title.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesLevel = filterLevel === 'all' || test.level === filterLevel;
@@ -211,6 +224,9 @@ const TestManager = () => {
       <div className="page-actions">
         <button className="btn btn-primary" onClick={handleAddNewTest}>
           + Yangi Test Qo'shish
+        </button>
+        <button className="btn btn-primary" onClick={() => setShowWordUpload(true)} style={{background: 'linear-gradient(135deg, #10b981, #34d399)'}}>
+          📄 Word Fayldan Yaratish
         </button>
       </div>
 
@@ -267,12 +283,8 @@ const TestManager = () => {
                       <td>{test.questions?.length || 0} ta</td>
                       <td>{test.duration} min</td>
                       <td className="action-buttons">
-                        <button className="btn btn-sm btn-edit" onClick={() => handleEditTest(test)}>
-                          ✏️
-                        </button>
-                        <button className="btn btn-sm btn-delete" onClick={() => handleDeleteTest(test.id)}>
-                          🗑️
-                        </button>
+                        <button className="btn btn-sm btn-edit" onClick={() => handleEditTest(test)}>✏️</button>
+                        <button className="btn btn-sm btn-delete" onClick={() => handleDeleteTest(test.id)}>🗑️</button>
                       </td>
                     </tr>
                   ))
@@ -308,19 +320,11 @@ const TestManager = () => {
                       <tr key={q.id}>
                         <td>{idx + 1}</td>
                         <td>{q.text.substring(0, 50)}...</td>
-                        <td>
-                          <span className="type-badge">
-                            {q.type === 'multiple' ? 'Ko\'p variantli' : q.type === 'truefalse' ? 'To\'g\'ri/Noto\'g\'ri' : 'Esse'}
-                          </span>
-                        </td>
+                        <td><span className="type-badge">{q.type === 'multiple' ? 'Ko\'p variantli' : q.type === 'truefalse' ? 'To\'g\'ri/Noto\'g\'ri' : 'Esse'}</span></td>
                         <td>{q.points}</td>
                         <td className="action-buttons">
-                          <button className="btn btn-sm btn-edit" onClick={() => handleEditQuestion(q)}>
-                            ✏️
-                          </button>
-                          <button className="btn btn-sm btn-delete" onClick={() => handleDeleteQuestion(q.id)}>
-                            🗑️
-                          </button>
+                          <button className="btn btn-sm btn-edit" onClick={() => handleEditQuestion(q)}>✏️</button>
+                          <button className="btn btn-sm btn-delete" onClick={() => handleDeleteQuestion(q.id)}>🗑️</button>
                         </td>
                       </tr>
                     ))
@@ -502,6 +506,13 @@ const TestManager = () => {
             </div>
           </div>
         </div>
+      )}
+
+      {showWordUpload && (
+        <WordTestUpload 
+          onUploadSuccess={handleWordUploadSuccess}
+          onClose={() => setShowWordUpload(false)}
+        />
       )}
     </div>
   );
