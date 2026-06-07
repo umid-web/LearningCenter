@@ -1,0 +1,560 @@
+{
+  "navbar": {
+    "logo": "https://picsum.photos/200/50"
+  },
+
+  "footer": {
+  "logo": "https://picsum.photos/200/50",
+
+  "links": [
+    {
+      "title": "Kurslar",
+      "path": "/courses"
+    },
+    {
+      "title": "O‘qituvchilar",
+      "path": "/teachers"
+    },
+    {
+      "title": "Biz haqimizda",
+      "path": "/about"
+    }
+  ],
+
+  "socials": [
+    {
+      "name": "Instagram",
+      "icon": "📷",
+      "url": "https://instagram.com/umidjon.0528/"
+    },
+    {
+      "name": "Telegram",
+      "icon": "📱",
+      "url": "https://t.me/umid_web"
+    },
+    {
+      "name": "YouTube",
+      "icon": "▶️",
+      "url": "https://youtube.com"
+    },
+    {
+      "name": "Facebook",
+      "icon": "📘",
+      "url": "https://facebook.com"
+    }
+  ],
+
+  "phone": "+998 90 123 45 67",
+  "email": "info@ieltscenter.uz",
+  "copyright": "© 2026 Barcha huquqlar himoyalangan"
+},
+
+
+
+
+  "hero": {
+    "title": "INGLIZ TILINI <span>PROFESSIONAL</span> DARAJADA O‘RGANING",
+    "description": "IELTS, CEFR va General English kurslari orqali xalqaro darajadagi natijalarga erishing. Tajribali ustozlar va zamonaviy metodika bilan o‘qishni boshlang.",
+    "features": [
+      "IELTS 8.5 natijalar",
+      "Tajribali va sertifikatlangan ustozlar",
+      "Zamonaviy o‘qitish metodikasi"
+    ],
+    "buttons": [
+      {
+        "text": "Bepul test topshirish",
+        "link": "/test"
+      },
+      {
+        "text": "Hoziroq ro‘yxatdan o‘tish",
+        "link": "/register"
+      }
+    ],
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+    "video": "https://samplelib.com/lib/preview/mp4/sample-5s.mp4",
+    "stats": [
+      {
+        "icon": "⭐",
+        "title": "IELTS 8.5"
+      },
+      {
+        "icon": "🎓",
+        "title": "CEFR C1"
+      },
+      {
+        "icon": "👨‍🎓",
+        "title": "5000+ Talabalar"
+      }
+    ]
+  },
+
+
+
+
+  "trust": {
+    "title": "Bizning natijalar raqamlarda",
+    "items": [
+      {
+        "number": 5000,
+        "suffix": "+",
+        "label": "Talabalar"
+      },
+      {
+        "number": 50,
+        "suffix": "+",
+        "label": "Professional ustozlar"
+      },
+      {
+        "number": 95,
+        "suffix": "%",
+        "label": "Mamnun talabalar"
+      },
+      {
+        "number": 10,
+        "suffix": "+",
+        "label": "Yillik tajriba"
+      }
+    ]
+  },
+
+
+
+
+  "placementTest": {
+    "title": "Boshlangʻich Darajangizni Tekshiring",
+    "description": "5 daqiqalik bepul test orqali o'z darajangizni aniqlang va shaxsiy tavsiyalar oling",
+    "button": {
+      "text": "Testni boshlash",
+      "link": "/placement-test"
+    },
+    "steps": [
+      {
+        "number": "01",
+        "title": "Shaxsiy ma'lumotlarni kiriting"
+      },
+      {
+        "number": "02",
+        "title": "5 ta savolga javob bering"
+      },
+      {
+        "number": "03",
+        "title": "O'z darajangizni bilib oling"
+      },
+      {
+        "number": "04",
+        "title": "Tavsiyalar olish"
+      }
+    ]
+  },
+
+
+
+   "ieltsResults": {
+    "title": "SERTIFIKAT NATIJALARI",
+    "students": [
+      {
+        "name": "Muhammadali",
+        "overall": "8.5",
+        "image": "https://picsum.photos/200/300?random=1",
+        "listening": "9.0",
+        "reading": "9.0",
+        "writing": "8.0",
+        "speaking": "8.0"
+      },
+      {
+        "name": "Aziza",
+        "overall": "8.0",
+        "image": "https://picsum.photos/200/300?random=2",
+        "listening": "8.5",
+        "reading": "8.5",
+        "writing": "7.5",
+        "speaking": "8.0"
+      },
+      {
+        "name": "Jasur",
+        "overall": "7.5",
+        "image": "https://picsum.photos/200/300?random=3",
+        "listening": "8.0",
+        "reading": "8.0",
+        "writing": "7.0",
+        "speaking": "7.5"
+      },
+      {
+        "name": "Nilufar",
+        "overall": "8.0",
+        "image": "https://picsum.photos/200/300?random=4",
+        "listening": "8.5",
+        "reading": "8.0",
+        "writing": "7.5",
+        "speaking": "8.0"
+      },
+      {
+        "name": "Sardor",
+        "overall": "7.0",
+        "image": "https://picsum.photos/200/300?random=5",
+        "listening": "7.5",
+        "reading": "7.0",
+        "writing": "6.5",
+        "speaking": "7.0"
+      },
+      {
+        "name": "Gulnora",
+        "overall": "8.5",
+        "image": "https://picsum.photos/200/300?random=6",
+        "listening": "9.0",
+        "reading": "8.5",
+        "writing": "8.0",
+        "speaking": "8.5"
+      }
+    ]
+  },
+
+
+
+"consultation": {
+  "title": "IELTS va Ingliz Tilida Yuqori Natijalarga Erishishga Tayyormisiz?",
+  "description": "Tajribali mentorlar, zamonaviy metodika va natijaga yo‘naltirilgan dasturlar yordamida ingliz tilini qisqa muddatda ishonch bilan o‘zlashtiring.",
+  "highlight": "🎁 Bepul daraja aniqlash testi va individual o‘quv rejasi",
+  "phones": [
+    "+998 90 160 05 28",
+    "+998 90 160 05 28"
+  ],
+  "form": {
+    "namePlaceholder": "Ismingizni kiriting",
+    "phonePlaceholder": "Telefon raqamingiz",
+    "button": "Bepul konsultatsiya olish"
+  },
+  "steps": [
+    {
+      "icon": "🎯",
+      "title": "Aniq maqsad va strategiya",
+      "desc": "Darajangiz tahlil qilinadi va maqsadingizga mos shaxsiy o‘quv reja tuziladi."
+    },
+    {
+      "icon": "🚀",
+      "title": "Tezkor natija",
+      "desc": "IELTS, CEFR va General English bo‘yicha natijalaringizni sezilarli darajada oshiring."
+    }
+  ]
+},
+
+
+  "about": {
+    "hero": {
+      "badge": "Biz haqimizda",
+      "title": "Kelajak avlodni <span>sifatli ta’lim</span> orqali dunyoga tanitamiz",
+      "description": "Lingua Academy — bu nafaqat ingliz tili kursi, balki o‘z o‘quvchilarini xalqaro darajada raqobatbardosh, zamonaviy va mustaqil fikrlaydigan shaxs sifatida shakllantiradigan kuchli ta’lim muassasasidir."
+    },
+    "mission": {
+      "title": "Missiyamiz",
+      "description": "Har bir o‘zbek yoshining imkoniyatlarini kengaytirish, unga jahon standartlariga mos bilim va ko‘nikmalarni yetkazish.",
+      "quote": "O‘zbekiston yoshlarini dunyoning istalgan universitetida o‘qishga va xalqaro miqyosda muvaffaqiyat qozonishga tayyorlash."
+    },
+    "values": [
+      { "icon": "🎯", "title": "Natijaga yo‘naltirilganlik", "desc": "Har bir talabamiz aniq maqsad sari harakat qiladi." },
+      { "icon": "👤", "title": "Shaxsiy yondashuv", "desc": "Dasturlar sizning darajangiz va ehtiyojlaringizga moslangan." },
+      { "icon": "📚", "title": "Zamonaviy metodika", "desc": "Faqat isbotlangan va samarali o‘qitish usullari." },
+      { "icon": "🤝", "title": "Shaffoflik va ishonch", "desc": "Ota-onalar va talabalar bilan ochiq muloqot." }
+    ],
+    "directions": [
+      { "name": "IELTS tayyorlov kurslari", "desc": "Umumiy va akademik modul" },
+      { "name": "General English", "desc": "A1 dan C1 darajagacha" },
+      { "name": "CEFR sertifikatiga tayyorlov", "desc": "Xalqaro standart" },
+      { "name": "Suhbat va intervyu", "desc": "Ingliz tilida" },
+      { "name": "Korporativ ingliz tili", "desc": "Kompaniyalar va tashkilotlar uchun" },
+      { "name": "Onlayn ta’lim platformasi", "desc": "24/7 rejimda" }
+    ],
+    "goal": {
+      "title": "Maqsadimiz",
+      "text": "O‘zbekiston ta’lim tizimini xalqaro standartlarga to‘liq moslashtirish va ingliz tilini o‘rganishni hamma uchun qulay hamda samarali jarayonga aylantirish."
+    },
+    "stats": [
+      { "number": "10+", "label": "Yillik tajriba" },
+      { "number": "5000+", "label": "Bitiruvchi" },
+      { "number": "50+", "label": "Tajribali ustoz" },
+      { "number": "6", "label": "Yo‘nalish" }
+    ]
+  },
+
+
+
+
+  "teachersPage": {
+    "badge": "Bizning jamoa",
+    "title": "Tajribali ustozlar",
+    "subtitle": "Har bir o‘qituvchimiz o‘z sohasining professionali va sertifikatlangan mutaxassis"
+  },
+  "teachers": [
+    {
+      "id": 1,
+      "name": "Sarvar Akramov",
+      "image": "https://randomuser.me/api/portraits/men/32.jpg",
+      "result": "IELTS 8.5",
+      "experience": "10+ yil",
+      "subjects": ["IELTS Academic", "General English", "Speaking"],
+      "achievements": ["300+ talaba IELTS 7.0+", "Sertifikatlangan examiner", "Best Teacher 2023"],
+      "rating": 4.9,
+      "bio": "Sarvar akam 10 yildan ortiq tajribaga ega bo‘lib, 500 dan ortiq talabalarni IELTS imtihoniga tayyorlagan."
+    },
+    {
+      "id": 2,
+      "name": "Dilnoza Rahimova",
+      "image": "https://randomuser.me/api/portraits/women/68.jpg",
+      "result": "CEFR C2",
+      "experience": "8 yil",
+      "subjects": ["General English", "Business English", "Writing"],
+      "achievements": ["200+ talaba C1 darajaga chiqqan", "Cambridge sertifikati", "Eng yaxshi mentor 2022"],
+      "rating": 4.8,
+      "bio": "Dilnoza xonim nafaqat ingliz tili, balki biznes ingliz tiliga ixtisoslashgan."
+    },
+    {
+      "id": 3,
+      "name": "Jasur Qodirov",
+      "image": "https://randomuser.me/api/portraits/men/45.jpg",
+      "result": "IELTS 8.0",
+      "experience": "6 yil",
+      "subjects": ["IELTS General", "Reading", "Vocabulary"],
+      "achievements": ["100+ talaba Reading 8.0+", "Eng yaxshi yosh ustoz 2024", "O‘z metodikasini yaratgan"],
+      "rating": 4.7,
+      "bio": "Jasur juda energik va zamonaviy yondashuvga ega."
+    },
+    {
+      "id": 4,
+      "name": "Gulnora Saidova",
+      "image": "https://randomuser.me/api/portraits/women/90.jpg",
+      "result": "IELTS 8.5",
+      "experience": "12 yil",
+      "subjects": ["IELTS Academic", "Writing", "Grammar"],
+      "achievements": ["400+ talaba Writing 7.0+", "IELTS examiner", "Pedagogika fanlari nomzodi"],
+      "rating": 5.0,
+      "bio": "Gulnora opa eng tajribali ustozlarimizdan biri bo‘lib, ayniqsa writing qismiga ixtisoslashgan."
+    },
+    {
+      "id": 5,
+      "name": "Sardor Islomov",
+      "image": "https://randomuser.me/api/portraits/men/22.jpg",
+      "result": "IELTS 8.0",
+      "experience": "7 yil",
+      "subjects": ["IELTS General", "Listening", "Vocabulary"],
+      "achievements": ["300+ talaba Listening 8.0+", "Eng yaxshi yosh ustoz 2024", "O‘z metodikasini yaratgan"],
+      "rating": 4.6,
+      "bio": "Sardor opa ingliz tili o‘qitishda 7 yildan ortiq tajriba bilan."
+    },
+    {
+      "id": 6,
+      "name": "Nilufar Karimova",
+      "image": "https://randomuser.me/api/portraits/women/44.jpg",
+      "result": "IELTS 7.5",
+      "experience": "9 yil",
+      "subjects": ["IELTS Academic", "Writing", "Grammar"],
+      "achievements": ["350+ talaba Writing 7.0+", "IELTS examiner", "Pedagogika fanlari nomzodi"],
+      "rating": 4.9,
+      "bio": "Nilufar opa ingliz tili o‘qitishda 9 yildan ortiq tajriba bilan."
+    }
+
+  ],
+
+
+
+   "courses": [
+    {
+      "id": 1,
+      "title": "General English",
+      "level": "A1-B1",
+      "duration": "3 oy",
+      "icon": "📘",
+      "price": "1 200 000 so‘m",
+      "fullDescription": "Ushbu kurs boshlang‘ich va o‘rta darajadagi o‘quvchilar uchun mo‘ljallangan. Darslar grammatika, so‘z boyligi, tinglab tushunish va gapirish ko‘nikmalariga qaratilgan. Kurs yakunida siz kundalik mavzularda bemalol suhbatlasha olasiz.",
+      "curriculum": [
+        "Present tenses & vocabulary",
+        "Past tenses & storytelling",
+        "Future forms & plans",
+        "Listening & speaking practice"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "IELTS Preparation",
+      "level": "B2-C1",
+      "duration": "4 oy",
+      "icon": "🎓",
+      "price": "1 800 000 so‘m",
+      "fullDescription": "IELTS imtihoniga tayyorlov kursi. 4 ta bo‘lim (Listening, Reading, Writing, Speaking) bo‘yicha intensiv mashg‘ulotlar, haftalik mock testlar va individual feedback.",
+      "curriculum": [
+        "Listening strategies",
+        "Reading speed & techniques",
+        "Writing task 1 & 2",
+        "Speaking mock interviews"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Business English",
+      "level": "B1-C1",
+      "duration": "2.5 oy",
+      "icon": "💼",
+      "price": "1 500 000 so‘m",
+      "fullDescription": "Ishbilarmonlik ingliz tili: muzokaralar, prezentatsiyalar, biznes yozishmalar va telefon suhbatlari. Kurs oxirida sertifikat va portfolio.",
+      "curriculum": [
+        "Negotiations & presentations",
+        "Business correspondence",
+        "Telephone etiquette",
+        "Company culture & meetings"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Kids English",
+      "level": "A1-A2",
+      "duration": "6 oy",
+      "icon": "🧸",
+      "price": "900 000 so‘m",
+      "fullDescription": "Bolalar uchun o‘yin asosida ingliz tili. 7-12 yoshli bolalar uchun maxsus dastur, interaktiv darslar, qo‘shiqlar va videolar.",
+      "curriculum": [
+        "Alphabet & phonics",
+        "Basic vocabulary through games",
+        "Simple sentences",
+        "Songs and stories"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Academic English",
+      "level": "B2-C1",
+      "duration": "3 oy",
+      "icon": "📚",
+      "price": "1 700 000 so‘m",
+      "fullDescription": "Akademik ingliz tili: ilmiy maqolalar, taqdimotlar, akademik yozishmalar va tadqiqot metodologiyasi. Kurs oxirida sertifikat va portfolio.",
+      "curriculum": [
+        "Academic reading strategies",
+        "Essay writing & research papers",
+        "Presentation skills",
+        "Academic vocabulary"
+      ]
+    }
+  ],
+
+
+
+
+
+
+
+    "testSettings": {
+    "questionCounts": [10, 15, 20, 25]
+  },
+
+  "levels": [
+    {
+      "min": 0,
+      "max": 20,
+      "level": "A1 Beginner",
+      "description": "Boshlang'ich daraja"
+    },
+    {
+      "min": 21,
+      "max": 40,
+      "level": "A2 Elementary",
+      "description": "Elementar daraja"
+    },
+    {
+      "min": 41,
+      "max": 60,
+      "level": "B1 Intermediate",
+      "description": "O'rta daraja"
+    },
+    {
+      "min": 61,
+      "max": 80,
+      "level": "B2 Upper Intermediate",
+      "description": "Yuqori o'rta daraja"
+    },
+    {
+      "min": 81,
+      "max": 100,
+      "level": "C1 Advanced",
+      "description": "Ilg'or daraja"
+    }
+  ],
+
+  "tests": [
+    {
+      "id": 1,
+      "type": "grammar",
+      "question": "She ___ to school every day.",
+      "options": ["go", "goes", "going", "gone"],
+      "answer": "goes"
+    },
+    {
+      "id": 2,
+      "type": "grammar",
+      "question": "I ___ TV yesterday.",
+      "options": ["watch", "watched", "watching", "watches"],
+      "answer": "watched"
+    },
+    {
+      "id": 3,
+      "type": "vocabulary",
+      "question": "Choose the synonym of 'happy'.",
+      "options": ["sad", "angry", "joyful", "tired"],
+      "answer": "joyful"
+    },
+    {
+      "id": 4,
+      "type": "vocabulary",
+      "question": "What is the opposite of 'difficult'?",
+      "options": ["easy", "hard", "complicated", "simple"],
+      "answer": "easy"
+    },
+    {
+      "id": 5,
+      "type": "listening",
+      "question": "Listen to the audio and answer the question: What is the main topic of the conversation?",
+      "options": ["Travel", "Food", "Education", "Sports"],
+      "answer": "Education"
+    },
+      {
+        "id": 6,
+        "type": "listening",
+        "question": "Listen to the audio and answer the question: What time is the meeting scheduled for?",
+        "options": ["10 AM", "2 PM", "4 PM", "6 PM"],
+        "answer": "2 PM"
+      },
+{
+      "id": 7,
+      "type": "grammar",
+      "question": "He ___ a book right now.",
+      "options": ["reads", "read", "is reading", "reading"],
+      "answer": "is reading"
+    },
+     {
+      "id": 8,
+      "type": "grammar",
+      "question": "They ___ to the park every Sunday.",
+      "options": ["go", "goes", "going", "gone"],
+      "answer": "go"
+    },
+    {
+      "id": 9,
+      "type": "vocabulary",
+      "question": "Choose the synonym of 'big'.",
+      "options": ["small", "huge", "tiny", "little"],
+      "answer": "huge"
+    },
+    {
+      "id": 10,
+      "type": "listening",
+      "question": "Listen to the audio and answer the question: Where are they planning to go?",
+      "options": ["Beach", "Mountains", "City", "Countryside"],
+      "answer": "Beach"
+    }
+  ]
+
+
+
+
+
+
+
+
+}

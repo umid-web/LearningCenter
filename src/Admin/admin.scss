@@ -1,0 +1,98 @@
+// src/Admin/admin.scss
+
+/* Design tokens */
+:root {
+  --admin-bg: rgba(15, 15, 15, 0.85);
+  --admin-sidebar-bg: rgba(255, 255, 255, 0.08);
+  --admin-text: #e0e0e0;
+  --admin-accent: #ff9800; /* vibrant orange */
+  --admin-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  --admin-radius: 12px;
+  --admin-gap: 1rem;
+}
+
+.admin-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background: var(--admin-bg);
+  backdrop-filter: blur(8px);
+  color: var(--admin-text);
+  font-family: 'Inter', sans-serif;
+}
+
+.admin-sidebar {
+  width: 260px;
+  background: var(--admin-sidebar-bg);
+  backdrop-filter: blur(12px);
+  padding: var(--admin-gap);
+  box-shadow: var(--admin-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: var(--admin-gap);
+}
+
+.admin-logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: var(--admin-gap);
+  color: var(--admin-accent);
+}
+
+.admin-nav a {
+  display: block;
+  padding: 0.6rem 1rem;
+  border-radius: var(--admin-radius);
+  color: var(--admin-text);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.admin-nav a.active,
+.admin-nav a:hover {
+  background: rgba(255,152,0,0.15);
+  color: var(--admin-accent);
+}
+
+.logout-btn {
+  margin-top: auto;
+  background: transparent;
+  border: 1px solid var(--admin-accent);
+  color: var(--admin-accent);
+  padding: 0.5rem 1rem;
+  border-radius: var(--admin-radius);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.logout-btn:hover {
+  background: rgba(255,152,0,0.2);
+}
+
+.admin-content {
+  flex: 1;
+  padding: var(--admin-gap);
+  overflow-y: auto;
+}
+
+.admin-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--admin-gap);
+  margin-top: 1rem;
+}
+
+.stat-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(6px);
+  padding: 1.5rem;
+  border-radius: var(--admin-radius);
+  box-shadow: var(--admin-shadow);
+  text-align: center;
+  font-size: 1.2rem;
+}

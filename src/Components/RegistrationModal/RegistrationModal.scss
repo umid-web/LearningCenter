@@ -1,0 +1,155 @@
+@import '../../Variables.scss';
+
+.reg-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: regFadeIn 0.2s ease;
+}
+
+.reg-modal-content {
+  max-width: 500px;
+  width: 90%;
+  background: var(--bg-primary);
+  backdrop-filter: blur(16px);
+  border-radius: 48px;
+  padding: 40px 32px;
+  position: relative;
+  border: 1px solid rgba(var(--primary-rgb, 249, 115, 22), 0.3);
+  box-shadow: var(--shadow-2xl);
+  animation: regSlideUp 0.3s ease;
+  text-align: center;
+
+}
+
+.reg-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba($primary, 0.1);
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.05);
+  }
+}
+
+.reg-modal-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 28px;
+}
+
+.reg-form-group {
+  margin-bottom: 20px;
+  input {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 40px;
+    border: 1px solid rgba($primary, 0.3);
+    background: var(--bg-elevated);
+    font-size: 1rem;
+    color: var(--text-primary);
+    transition: all 0.3s;
+      box-sizing: border-box;
+    &:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba($primary, 0.2);
+      outline: none;
+    }
+  }
+}
+
+.reg-submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(105deg, var(--primary), var(--primary-dark));
+  color: white;
+  border: none;
+  border-radius: 60px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px var(--primary-shadow);
+  }
+}
+
+.reg-success {
+  background: rgba($success, 0.15);
+  color: $success;
+  padding: 16px;
+  border-radius: 40px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+// Dark mode override
+.dark {
+  .reg-modal-content {
+    background: rgba(30, 41, 59, 0.95);
+    border-color: rgba($primary, 0.4);
+  }
+  .reg-modal-close {
+    background: rgba($primary, 0.2);
+    &:hover {
+      background: var(--primary);
+    }
+  }
+}
+
+// Animatsiyalar (agar oldin aniqlanmagan bo‘lsa)
+@keyframes regFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes regSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Responsive
+@media (max-width: 576px) {
+  .reg-modal-content {
+    padding: 32px 24px;
+  }
+  .reg-modal-title {
+    font-size: 1.3rem;
+  }
+  .reg-form-group input {
+    padding: 12px 16px;
+  }
+}

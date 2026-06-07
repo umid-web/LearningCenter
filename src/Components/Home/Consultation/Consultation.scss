@@ -1,0 +1,455 @@
+@import "../../../Variables.scss";
+
+// ========== MIXINS ==========
+@mixin tablet { @media (max-width: 968px) { @content; } }
+@mixin mobile { @media (max-width: 576px) { @content; } }
+
+// ========== MAIN ==========
+.consult {
+  position: relative;
+  padding: 150px 0 100px;
+  background: radial-gradient(circle at 10% 30%, rgba(var(--primary-rgb), 0.15) 0%, var(--bg-primary) 90%);
+  overflow: hidden;
+
+  // ========== 4 TA SUZUVCHI NEON SHAR ==========
+  &__shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0;
+    animation: floatShape 18s infinite alternate ease-in-out;
+
+    &--1 {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, var(--primary-glow), transparent);
+      top: -150px;
+      left: -100px;
+      animation-delay: 0s;
+    }
+    &--2 {
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(var(--secondary-rgb), 0.3), transparent);
+      bottom: -200px;
+      right: -150px;
+      animation-delay: -5s;
+      animation-direction: alternate-reverse;
+    }
+    &--3 {
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(var(--accent-rgb), 0.25), transparent);
+      top: 40%;
+      left: 30%;
+      animation-delay: -10s;
+    }
+    &--4 {
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.2), transparent);
+      bottom: 10%;
+      right: 20%;
+      animation-delay: -15s;
+    }
+  }
+
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
+  }
+
+  // ========== FORM WRAPPER (3D + GLOW) ==========
+  &__form-wrapper {
+    position: relative;
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border-radius: 48px;
+    padding: 48px;
+    box-shadow: 0 25px 45px -12px rgba(0,0,0,0.25);
+    border: 1px solid rgba(var(--primary-rgb), 0.2);
+    transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+
+    &:hover {
+      transform: translateY(-10px) rotateX(2deg);
+      box-shadow: 0 35px 60px -15px rgba(var(--primary-rgb), 0.4);
+      border-color: var(--primary);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+      border-radius: 48px;
+      opacity: 0;
+      transition: opacity 0.4s;
+      z-index: -1;
+    }
+    &:hover::before {
+      opacity: 0.5;
+    }
+  }
+
+  &__form-header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  &__form-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--text-primary), var(--primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 0 0 15px;
+  }
+
+  &__form-sub {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: auto;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+
+    .input-group {
+      position: relative;
+      input {
+        width: 100%;
+        padding: 16px 20px;
+        border-radius: 28px;
+        border: 1px solid rgba(var(--text-primary-rgb), 0.15);
+        background: var(--bg-elevated);
+        font-size: 1rem;
+        transition: all 0.3s;
+        box-sizing: border-box;
+        color: var(--text-primary);
+
+        &:focus {
+          border-color: var(--primary);
+          box-shadow: 0 0 0 5px rgba(var(--primary-rgb), 0.2);
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+
+  /* 🎯 BUTTON – Hero dagi primary tugma bilan 100% bir xil */
+  &__submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-decoration: none;
+    padding: 16px 36px;
+    border-radius: 60px;
+    font-weight: 700;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+    cursor: pointer;
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 8px 20px var(--primary-shadow);
+    border: none;
+    width: 100%;
+
+    // Hero bilan bir xil nafas olish animatsiyasi
+    animation: btnBreathingPrimary 2.8s ease-in-out infinite;
+
+    // Yaltiroq effekt (shine) – xuddi Hero dagi kabi
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -150%;
+      width: 120%;
+      height: 100%;
+      background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.25),
+        transparent
+      );
+      animation: shineMove 3.5s linear infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0.25),
+        transparent 70%
+      );
+      opacity: 0;
+      transition: 0.3s ease;
+      z-index: 0;
+    }
+
+    &:hover {
+      transform: translateY(-6px) scale(1.06);
+      box-shadow: 0 18px 40px var(--primary-shadow);
+      background: var(--primary-dark);
+      letter-spacing: 0.5px; // Hero dagi kabi
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      transform: translateY(-2px) scale(1.02);
+    }
+
+    .btn-icon {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.25s;
+    }
+
+    &:hover .btn-icon {
+      transform: translateX(6px);
+    }
+  }
+
+  &__privacy {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  // ========== RIGHT SIDE (WOW TIMELINE) ==========
+  &__header {
+    margin-bottom: 10px;
+  }
+  &__badge {
+    display: inline-block;
+    background: var(--bg-elevated);
+    color: var(--primary);
+    padding: 4px 14px;
+    border-radius: 60px;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0 0 20px;
+  }
+  &__title {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-primary);
+    span {
+      background: linear-gradient(120deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background: rgba(var(--accent-rgb), 0.3);
+        border-radius: 4px;
+        z-index: -1;
+      }
+    }
+  }
+  &__description {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  &__highlight {
+    background: rgba(var(--primary-rgb), 0.1);
+    border-left: 4px solid var(--primary);
+    padding: 12px 18px;
+    border-radius: 16px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 30px;
+  }
+
+  // Timeline vertical
+  &__timeline {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 30px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 18px;
+      top: 10px;
+      bottom: 10px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--primary), rgba(var(--primary-rgb), 0.9));
+      border-radius: 2px;
+    }
+  }
+  &__timeline-item {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 15px;
+    margin: 0;
+    &:last-child { padding-bottom: 0; }
+  }
+  &__timeline-icon-box {
+    width: 52px;
+    height: 52px;
+    background: var(--bg-elevated);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    transition: all 0.3s;
+    border: 1px solid rgba(var(--primary-rgb), 0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    flex-shrink: 0;
+    &:hover {
+      transform: scale(1.1) rotate(5deg);
+      background: var(--primary);
+      border-color: var(--primary);
+      .consult__timeline-icon {
+        filter: drop-shadow(0 0 5px white);
+      }
+    }
+  }
+  &__timeline-content {
+    h4 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+    p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+  }
+
+  // Phone buttons
+  &__phones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  &__phone-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg-elevated);
+    padding: 12px 24px;
+    border-radius: 60px;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--secondary);
+    transition: all 0.3s;
+    border: 1px solid rgba(var(--secondary-rgb), 0.2);
+    backdrop-filter: blur(4px);
+    &:hover {
+      background: var(--secondary);
+      color: white;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 20px rgba(var(--secondary-rgb), 0.4);
+      gap: 14px;
+    }
+  }
+}
+
+// ========== ANIMATSIYALAR (Hero bilan bir xil) ==========
+@keyframes floatShape {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(30px, -40px) scale(1.1); }
+}
+
+@keyframes btnBreathingPrimary {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 15px var(--primary-shadow);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px var(--primary-shadow);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px var(--primary-shadow);
+  }
+}
+
+@keyframes shineMove {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+// Responsive
+@include mobile {
+  .consult {
+    padding: 70px 0;
+  }
+  .consult__form-wrapper {
+    padding: 32px 20px;
+  }
+  .consult__timeline {
+    padding-left: 16px;
+    &::before { left: 12px; }
+  }
+  .consult__timeline-icon-box {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+  }
+  .consult__submit-btn {
+    padding: 12px 28px;
+    font-size: 16px;
+  }
+}
+
+// Reduced motion – barcha animatsiyalar o‘chiriladi
+@media (prefers-reduced-motion: reduce) {
+  .consult__shape,
+  .consult__submit-btn {
+    animation: none;
+  }
+  .consult__submit-btn::before {
+    animation: none;
+  }
+}

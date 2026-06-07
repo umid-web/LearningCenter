@@ -1,0 +1,320 @@
+@import '../../../Variables.scss';
+
+.ielts {
+  padding: 60px 0;
+  // background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+  }
+
+  &::before {
+    top: 0;
+    height: 600px;
+    background: radial-gradient(
+      ellipse at 10% 40%,
+      rgba($primary, 0.04),
+      transparent 70%
+    );
+  }
+
+  &::after {
+    bottom: 0;
+    height: 400px;
+    background: radial-gradient(
+      ellipse at 70% 80%,
+      rgba($secondary, 0.06),
+      transparent 70%
+    );
+  }
+
+  &__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  &__title {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 20px 0 10px;
+    background: linear-gradient(
+      135deg,
+      var(--text-primary),
+      var(--primary),
+      var(--secondary)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -0.02em;
+
+    @media (max-width: 768px) {
+      font-size: 38px;
+    }
+  }
+
+  &__swiper {
+    padding: 20px 0 70px;
+  }
+
+  // ===== KARTALAR =====
+  &__card {
+    background: var(--card-bg);
+    border-radius: 36px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 36px;
+      padding: 1px;
+      background: linear-gradient(
+        135deg,
+        transparent,
+        var(--primary-light),
+        transparent
+      );
+      mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity 0.4s;
+      pointer-events: none;
+    }
+
+    &:hover {
+      transform: translateY(-12px);
+      box-shadow: var(--shadow-xl);
+      border-color: transparent;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__card-inner {
+    padding: 32px 24px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  // ===== RASM (kattalashtirilgan, sertifikat uchun) =====
+  &__image-wrapper {
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      opacity: 0.4;
+      z-index: -1;
+      transition: opacity 0.3s;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid var(--card-bg);
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    background: var(--bg-elevated);
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 25px 40px -15px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  // Sertifikat ustida IELTS badge (ixtiyoriy)
+  &__overall-badge {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 6px 14px;
+    border-radius: 40px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--card-bg);
+    letter-spacing: -0.3px;
+  }
+
+  &__name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+    letter-spacing: -0.3px;
+    background: linear-gradient(
+      135deg,
+      var(--text-primary),
+      var(--text-secondary)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+
+  // ===== NATIJALAR KICHRAYTIRILDI =====
+  &__scores {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 100%;
+  }
+
+  &__score-item {
+    background: var(--bg-elevated);
+    padding: 10px 8px;
+    border-radius: 20px;
+    transition: all 0.25s ease;
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(4px);
+
+    &:hover {
+      transform: translateY(-3px);
+      background: var(--bg-hover);
+      border-color: var(--primary);
+      box-shadow: 0 6px 12px -6px rgba($primary, 0.15);
+    }
+
+    span {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 6px;
+    }
+
+    strong {
+      font-size: 19px;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.3px;
+    }
+  }
+}
+
+// Swiper navigation + Pagination
+.ielts__swiper {
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 45px;
+    height: 45px;
+    background: var(--bg-blur);
+    backdrop-filter: blur(12px);
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+    transition: all 0.25s;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    &::after {
+      font-size: 15px;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    &:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+      transform: scale(1.1);
+      &::after {
+        color: white;
+      }
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 0;
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .ielts {
+    padding: 80px 0;
+  }
+  .ielts__container {
+    padding: 0 16px;
+  }
+  .ielts__header {
+    margin-bottom: 48px;
+  }
+  .ielts__card-inner {
+    padding: 24px 16px 28px;
+  }
+  .ielts__image-wrapper {
+    max-width: 220px;
+  }
+  .ielts__score-item strong {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ielts__card,
+  .ielts__image,
+  .ielts__score-item {
+    transition: none;
+    transform: none;
+  }
+  .ielts__card:hover {
+    transform: none;
+  }
+}

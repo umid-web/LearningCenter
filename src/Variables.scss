@@ -1,0 +1,120 @@
+// ===== SCSS VARIABLES (eski komponentlar uchun qo'llab-quvvatlash) =====
+// 🎨 MAIN COLORS (Orange tema)
+$primary: #f97316;
+$primary-dark: #ea580c;
+$primary-light: #fb923c;
+$secondary: #f59e0b;
+$accent: #fbbf24;
+
+// ✔ STATUS COLORS
+$success: #10b981;
+$warning: #f59e0b;
+$danger: #ef4444;
+$info: #3b82f6;
+
+// 🌫 BACKGROUNDS
+$bg-light: #ffffff;
+$bg-dark: #0f172a;
+$card-light: #ffffff;
+$card-dark: #1e293b;
+$card-bg-overlay: rgba(148, 147, 147, 0.85);
+
+// ✍️ TEXT COLORS
+$text-primary: #1e293b;
+$text-secondary: #475569;
+$text-muted: #94a3b8;
+$text-dark: #f1f5f9;
+
+// 📦 SHADOWS
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+$shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+// ===== CSS CUSTOM PROPERTIES (dark mode qo'llab-quvvatlash) =====
+:root {
+  // Primary colors
+  --primary: #f97316;
+  --primary-dark: #ea580c;
+  --primary-light: #fb923c;
+  --primary-glow: rgba(249, 115, 22, 0.4);
+  --primary-shadow: rgba(249, 115, 22, 0.35);
+
+  // Secondary
+  --secondary: #f59e0b;
+  --accent: #fbbf24;
+
+  // Status colors
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: #3b82f6;
+
+  // Backgrounds (Light theme)
+  --bg-primary: #ffffff;
+  --bg-elevated: #f8fafc;
+  --bg-hover: #f1f5f9;
+  --bg-blur: rgba(255, 255, 255, 0.85);
+  --bg-mobile-menu: rgba(255, 255, 255, 0.98);
+
+  // Text colors (Light theme)
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+
+  // Border
+  --border-color: #e2e8f0;
+
+  // Shadows
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 1px 3px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg:
+    0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  --shadow-xl:
+    0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+}
+
+// Dark theme
+.dark {
+  --primary: #fb923c;
+  --primary-dark: #f97316;
+  --primary-light: #fdba74;
+  --primary-glow: rgba(251, 146, 60, 0.5);
+  --primary-shadow: rgba(251, 146, 60, 0.4);
+
+  --bg-primary: #0f172a;
+  --bg-elevated: #1e293b;
+  --bg-hover: #334155;
+  --bg-blur: rgba(15, 23, 42, 0.9);
+  --bg-mobile-menu: rgba(15, 23, 42, 0.97);
+  --card-bg-overlay: rgba(30, 41, 59, 0.85);
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+
+  --border-color: #1e293b;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-lg:
+    0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  --shadow-xl:
+    0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+// Smooth transition for theme switching
+* {
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.15s ease;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
