@@ -3,12 +3,15 @@ import { NavLink, useNavigate, Navigate, Routes, Route, useLocation } from 'reac
 import { useState } from 'react'
 import './admin.scss'
 import Dashboard from './Dashboard.jsx'
-import CourseManager from './CourseManager.jsx'
-import TeacherManager from './TeacherManager.jsx'
+import EnhancedCourseManager from './EnhancedCourseManager.jsx'
+import EnhancedTeacherManager from './EnhancedTeacherManager.jsx'
 import UserManager from '../Admin/UserManager.jsx'
 import RegistrationsManager from './RegistrationsManager.jsx'
-import Settings from './Settings.jsx'
+import EnhancedSettingsManager from './EnhancedSettingsManager.jsx'
 import Profile from './Profile.jsx'
+import TestManager from './TestManager.jsx'
+import HomepageManager from './HomepageManager.jsx'
+import AboutManager from './AboutManager.jsx'
 import { getCurrentUser, logout as logoutUser } from '../utils/auth'
 
 const AdminLayout = () => {
@@ -85,6 +88,32 @@ const AdminLayout = () => {
           >
             📋 Ro'yxatlanishlar
           </NavLink>
+
+          <NavLink
+            to="/admin/tests"
+            className={({ isActive }) => (isActive ? 'active' : '')}
+            onClick={() => setSidebarOpen(false)}
+          >
+            ❓ Testlar
+          </NavLink>
+          
+          <div className="nav-divider">SAYT TARKIBI</div>
+
+          <NavLink
+            to="/admin/homepage"
+            className={({ isActive }) => (isActive ? 'active' : '')}
+            onClick={() => setSidebarOpen(false)}
+          >
+            🏠 Bosh Sahifa
+          </NavLink>
+
+          <NavLink
+            to="/admin/about"
+            className={({ isActive }) => (isActive ? 'active' : '')}
+            onClick={() => setSidebarOpen(false)}
+          >
+            ℹ️ Biz Haqimizda
+          </NavLink>
           
           <div className="nav-divider">SOZLAMALAR</div>
           
@@ -127,11 +156,14 @@ const AdminLayout = () => {
         <Routes>
           <Route index element={<Navigate to="dashboard" replace />} />
           <Route path="dashboard" element={<Dashboard />} />
-          <Route path="courses" element={<CourseManager />} />
-          <Route path="teachers" element={<TeacherManager />} />
+          <Route path="courses" element={<EnhancedCourseManager />} />
+          <Route path="teachers" element={<EnhancedTeacherManager />} />
           <Route path="users" element={<UserManager />} />
           <Route path="registrations" element={<RegistrationsManager />} />
-          <Route path="settings" element={<Settings />} />
+          <Route path="tests" element={<TestManager />} />
+          <Route path="homepage" element={<HomepageManager />} />
+          <Route path="about" element={<AboutManager />} />
+          <Route path="settings" element={<EnhancedSettingsManager />} />
           <Route path="profile" element={<Profile />} />
           <Route path="*" element={<Navigate to="dashboard" replace />} />
         </Routes>
