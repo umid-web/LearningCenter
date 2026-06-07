@@ -29,14 +29,25 @@ function OnlineTest() {
             
             if (firstItem.hasOwnProperty('question') || firstItem.hasOwnProperty('text')) {
               // Flat structure: individual questions
-              allQuestionsList = db.tests.map((q, idx) => ({
-                id: q.id || idx,
-                text: q.question || q.text || '',
-                options: q.options || [],
-                answer: q.answer || '',
-                correctAnswer: typeof q.correctAnswer === 'number' ? q.correctAnswer : 
-                  (q.answer ? ['A', 'B', 'C', 'D'].indexOf(String(q.answer).toUpperCase()) : 0)
-              }));
+              allQuestionsList = db.tests.map((q, idx) => {
+                // Find correct answer index from options
+                let correctAnswerIdx = 0;
+                if (q.answer) {
+                  const answerText = String(q.answer).toLowerCase().trim();
+                  correctAnswerIdx = (q.options || []).findIndex(
+                    opt => String(opt).toLowerCase().trim() === answerText
+                  );
+                  if (correctAnswerIdx === -1) correctAnswerIdx = 0; // fallback
+                }
+                
+                return {
+                  id: q.id || idx,
+                  text: q.question || q.text || '',
+                  options: q.options || [],
+                  answer: q.answer || '',
+                  correctAnswer: correctAnswerIdx
+                };
+              });
             } else if (firstItem.hasOwnProperty('questions')) {
               // Test collection structure: test objects with questions array
               firstItem.questions.forEach(test => {
