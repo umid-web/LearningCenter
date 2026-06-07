@@ -8,4 +8,12 @@ export default defineConfig({
     react(),
     babel({ presets: [reactCompilerPreset()] })
   ],
+  server: {
+    allowedHosts: [
+      'localhost',
+      '127.0.0.1',
+      '.vercel.run',
+      'sb-jxqiblhxth8t.vercel.run'
+    ]
+  }
 })
