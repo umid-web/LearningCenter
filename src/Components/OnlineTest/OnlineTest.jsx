@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import "./OnlineTest.scss";
+import axios from "axios";
 
 function OnlineTest() {
   const [allQuestions, setAllQuestions] = useState([]);
@@ -14,16 +14,53 @@ function OnlineTest() {
   const [questionCounts, setQuestionCounts] = useState([10, 15, 20, 25]);
 
   useEffect(() => {
+    // Fetch from actual db.json file
     axios.get("/db.json")
       .then((res) => {
-        const tests = res.data.tests || [];
-        setAllQuestions(tests);
-        setLevels(res.data.levels || []);
-        if (res.data.testSettings?.questionCounts) {
-          setQuestionCounts(res.data.testSettings.questionCounts);
+        const db = res.data;
+        
+        // Get all questions from tests
+        let allQuestionsList = [];
+        
+        if (db.tests && Array.isArray(db.tests)) {
+          // Check if tests is array of individual questions (flat structure) or test objects
+          if (db.tests.length > 0) {
+            const firstItem = db.tests[0];
+            
+            if (firstItem.hasOwnProperty('question') || firstItem.hasOwnProperty('text')) {
+              // Flat structure: individual questions
+              allQuestionsList = db.tests.map((q, idx) => ({
+                id: q.id || idx,
+                text: q.question || q.text || '',
+                options: q.options || [],
+                answer: q.answer || '',
+                correctAnswer: typeof q.correctAnswer === 'number' ? q.correctAnswer : 
+                  (q.answer ? ['A', 'B', 'C', 'D'].indexOf(String(q.answer).toUpperCase()) : 0)
+              }));
+            } else if (firstItem.hasOwnProperty('questions')) {
+              // Test collection structure: test objects with questions array
+              firstItem.questions.forEach(test => {
+                if (test.questions && Array.isArray(test.questions)) {
+                  allQuestionsList = [...allQuestionsList, ...test.questions];
+                }
+              });
+            }
+          }
+        }
+        
+        setAllQuestions(allQuestionsList);
+        
+        // Get levels and test settings
+        const testSettings = db.testSettings || {};
+        setLevels(testSettings.levels || db.levels || []);
+        if (testSettings.questionCounts) {
+          setQuestionCounts(testSettings.questionCounts);
         }
       })
-      .catch((err) => console.error("Ma'lumot yuklanmadi:", err))
+      .catch((err) => {
+        console.error("[v0] Test data loading error:", err);
+        setAllQuestions([]);
+      })
       .finally(() => setLoading(false));
   }, []);
 
@@ -50,7 +87,14 @@ function OnlineTest() {
   const finishTest = () => {
     let correct = 0;
     questions.forEach((q) => {
-      if (answers[q.id] === q.answer) correct++;
+      const userAnswer = answers[q.id];
+      const correctAnswer = typeof q.answer === 'number' ? q.answer : q.correctAnswer;
+      
+      if (userAnswer !== undefined && userAnswer !== '') {
+        if (Number(userAnswer) === Number(correctAnswer)) {
+          correct++;
+        }
+      }
     });
     const percent = Math.round((correct / questions.length) * 100);
     const foundLevel = levels.find(l => percent >= l.min && percent <= l.max);
@@ -105,16 +149,16 @@ function OnlineTest() {
             <div className="questions">
               {questions.map((q, idx) => (
                 <div key={q.id} className="question-card">
-                  <h3>{idx + 1}. {q.question}</h3>
+                  <h3>{idx + 1}. {q.text || q.question}</h3>
                   <div className="options">
-                    {q.options.map(opt => (
-                      <label key={opt}>
+                    {q.options.map((opt, optIdx) => (
+                      <label key={optIdx}>
                         <input
                           type="radio"
                           name={`q${q.id}`}
-                          value={opt}
-                          checked={answers[q.id] === opt}
-                          onChange={() => handleAnswer(q.id, opt)}
+                          value={optIdx}
+                          checked={Number(answers[q.id]) === optIdx}
+                          onChange={() => handleAnswer(q.id, optIdx)}
                         />
                         {opt}
                       </label>

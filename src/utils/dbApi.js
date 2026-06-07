@@ -261,7 +261,7 @@ export const addTest = (test) => {
   const newTest = {
     id: Math.max(...db.tests.map(t => t.id), 0) + 1,
     ...test,
-    questions: [],
+    questions: test.questions || [],
     createdAt: new Date().toISOString()
   };
   db.tests.push(newTest);
