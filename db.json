@@ -477,6 +477,36 @@
     }
   ],
 
+    "students": [
+    {
+      "id": 1,
+      "name": "Akmal Tursunov",
+      "email": "akmal@example.com",
+      "phone": "+998 90 111 22 33",
+      "level": "B1 Intermediate",
+      "course": "IELTS Preparation",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "name": "Madina Yusupova",
+      "email": "madina@example.com",
+      "phone": "+998 90 222 33 44",
+      "level": "A2 Elementary",
+      "course": "General English",
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "name": "Bekzod Aliyev",
+      "email": "bekzod@example.com",
+      "phone": "+998 90 333 44 55",
+      "level": "B2 Upper Intermediate",
+      "course": "Business English",
+      "status": "inactive"
+    }
+  ],
+
   "tests": [
     {
       "id": 1,
