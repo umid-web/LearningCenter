@@ -417,8 +417,66 @@
   }
   .teachers__grid {
     gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
   .teacher-card__name {
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .teachers {
+    padding: 50px 0;
+  }
+  .teachers__title {
+    font-size: 1.8rem;
+  }
+  .teachers__subtitle {
+    font-size: 1.1rem;
+  }
+  .teachers__grid {
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  .teacher-card__inner {
+    border-radius: 20px;
+  }
+  .teacher-card__name {
+    font-size: 1.1rem;
+  }
+  .teacher-card__result {
+    font-size: 0.9rem;
+  }
+  .teacher-modal__content {
+    padding: 24px 16px;
+    border-radius: 32px;
+  }
+  .teacher-modal__name {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .teachers {
+    padding: 40px 0;
+  }
+  .teachers__title {
+    font-size: 1.5rem;
+  }
+  .teachers__grid {
+    gap: 16px;
+    grid-template-columns: 1fr;
+  }
+  .teacher-card__info {
+    padding: 16px;
+  }
+  .teacher-modal__content {
+    padding: 20px 12px;
+  }
+  .teacher-modal__name {
+    font-size: 1.4rem;
+  }
+  .teacher-modal__image {
+    max-width: 200px;
   }
 }

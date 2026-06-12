@@ -480,6 +480,69 @@
   }
 }
 
+@media (max-width: 480px) {
+  .courses {
+    padding: 50px 0;
+  }
+  .courses__header h2 {
+    font-size: 1.8rem;
+  }
+  .courses__header p {
+    font-size: 1.1rem;
+  }
+  .course-card {
+    padding: 20px 16px;
+    border-radius: 24px;
+  }
+  .course-card h3 {
+    font-size: 1.3rem;
+  }
+  .course-card__icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+  .course-card__icon {
+    font-size: 1.8rem;
+  }
+  .modal-content {
+    padding: 24px 16px;
+    border-radius: 32px;
+  }
+  .modal-title {
+    font-size: 1.4rem;
+  }
+  .modal-icon {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .courses {
+    padding: 40px 0;
+  }
+  .courses__header h2 {
+    font-size: 1.5rem;
+  }
+  .courses__header p {
+    font-size: 1rem;
+  }
+  .course-card {
+    padding: 16px 12px;
+  }
+  .course-card h3 {
+    font-size: 1.2rem;
+  }
+  .course-card__meta .meta-item {
+    font-size: 0.9rem;
+  }
+  .modal-content {
+    padding: 20px 12px;
+  }
+  .modal-title {
+    font-size: 1.3rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .courses::before,
   .courses::after,

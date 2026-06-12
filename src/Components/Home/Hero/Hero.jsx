@@ -238,15 +238,37 @@ const Hero = () => {
           </motion.ul>
 
           <motion.div className="hero__buttons" variants={itemVariants}>
-            {buttons?.map((btn, i) => (
-              <a
-                key={i}
-                href={btn.link}
-                className={`hero__btn hero__btn--${i === 0 ? 'primary' : 'secondary'}`}
-              >
-                {btn.text}
-              </a>
-            ))}
+            {buttons?.map((btn, i) => {
+              // Second button is always the register button based on db.json structure
+              const isRegisterButton = i === 1;
+
+              if (isRegisterButton) {
+                return (
+                  <button
+                    key={i}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      console.log('Register button clicked, dispatching event');
+                      // Dispatch custom event to open registration modal
+                      window.dispatchEvent(new CustomEvent('openRegistrationModal'));
+                    }}
+                    className={`hero__btn hero__btn--${i === 0 ? 'primary' : 'secondary'}`}
+                  >
+                    {btn.text}
+                  </button>
+                );
+              }
+
+              return (
+                <a
+                  key={i}
+                  href={btn.link}
+                  className={`hero__btn hero__btn--${i === 0 ? 'primary' : 'secondary'}`}
+                >
+                  {btn.text}
+                </a>
+              );
+            })}
           </motion.div>
         </motion.div>
 

@@ -5,8 +5,8 @@ import Home from '../Pages/Home';
 import Footer from '../Main/Footer/Footer';
 import AboutPage from '../Pages/About';
 import TeachersPage from '../Pages/TeachersPage';
-import Courses from '../Components/CourseComp/Courses';
-import OnlineTest from '../Components/OnlineTest/OnlineTest';
+import Course from '../Pages/Cource';
+import Test from '../Pages/Test';
 
 function App() {
   return (
@@ -16,8 +16,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/teachers" element={<TeachersPage />} />
-        <Route path="/courses" element={<Courses />} />
-        <Route path="/test" element={<OnlineTest />} />
+        <Route path="/courses" element={<Course />} />
+        <Route path="/test" element={<Test />} />
         {/* Redirect unknown routes */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

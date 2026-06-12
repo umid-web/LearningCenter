@@ -259,18 +259,92 @@
     padding: 24px 16px;
   }
 }
+
 @media (max-width: 576px) {
-  .about__stats {
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+  .about {
+    padding: 50px 0;
+  }
+  .about__hero {
+    margin-bottom: 40px;
+  }
+  .about__badge {
+    font-size: 1rem;
+    padding: 5px 12px;
+  }
+  .about__title {
+    font-size: 1.8rem;
+  }
+  .about__description {
+    font-size: 1rem;
+  }
+  .about__mission,
+  .about__directions,
+  .about__goal-inner {
+    padding: 24px 20px;
+    border-radius: 32px;
+  }
+  .about__mission-icon {
+    font-size: 2rem;
+  }
+  .about__mission-title {
+    font-size: 1.5rem;
+  }
+  .about__mission-desc {
+    font-size: 1rem;
   }
   .about__mission-quote {
     font-size: 1rem;
+  }
+  .about__section-title {
+    font-size: 1.4rem;
+    margin-bottom: 32px;
+  }
+  .about__values-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .about__value-card {
+    padding: 20px 16px;
+  }
+  .about__value-icon {
+    font-size: 2rem;
+  }
+  .about__value-title {
+    font-size: 1.1rem;
+  }
+  .about__directions-grid {
+    grid-template-columns: 1fr;
   }
   .about__goal-inner h2 {
     font-size: 1.5rem;
   }
   .about__goal-inner p {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .about {
+    padding: 40px 0;
+  }
+  .about__container {
+    padding: 0 12px;
+  }
+  .about__title {
+    font-size: 1.5rem;
+  }
+  .about__mission,
+  .about__directions,
+  .about__goal-inner {
+    padding: 20px 16px;
+  }
+  .about__mission-title {
+    font-size: 1.3rem;
+  }
+  .about__section-title {
+    font-size: 1.2rem;
+  }
+  .about__value-card {
+    padding: 16px 12px;
   }
 }

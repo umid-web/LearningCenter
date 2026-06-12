@@ -1,8 +1,7 @@
 // src/components/Hero/Hero.jsx
-
+import Hero from "../Components/Home/Hero/Hero";
 import PlacementTest from "../Components/Home/BepulTest/PlacementTest";
 import Consultation from "../Components/Home/Consultation/Consultation";
-import Hero from "../Components/Home/Hero/Hero";
 import IELTSResults from "../Components/Home/IELTSResults/IELTSResults";
 import Trust from "../Components/Home/Trust/Trust";
 
