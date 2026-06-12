@@ -4,53 +4,50 @@
   },
 
   "footer": {
-  "logo": "https://picsum.photos/200/50",
+    "logo": "https://picsum.photos/200/50",
 
-  "links": [
-    {
-      "title": "Kurslar",
-      "path": "/courses"
-    },
-    {
-      "title": "O‘qituvchilar",
-      "path": "/teachers"
-    },
-    {
-      "title": "Biz haqimizda",
-      "path": "/about"
-    }
-  ],
+    "links": [
+      {
+        "title": "Kurslar",
+        "path": "/courses"
+      },
+      {
+        "title": "O‘qituvchilar",
+        "path": "/teachers"
+      },
+      {
+        "title": "Biz haqimizda",
+        "path": "/about"
+      }
+    ],
 
-  "socials": [
-    {
-      "name": "Instagram",
-      "icon": "📷",
-      "url": "https://instagram.com/umidjon.0528/"
-    },
-    {
-      "name": "Telegram",
-      "icon": "📱",
-      "url": "https://t.me/umid_web"
-    },
-    {
-      "name": "YouTube",
-      "icon": "▶️",
-      "url": "https://youtube.com"
-    },
-    {
-      "name": "Facebook",
-      "icon": "📘",
-      "url": "https://facebook.com"
-    }
-  ],
+    "socials": [
+      {
+        "name": "Instagram",
+        "icon": "📷",
+        "url": "https://instagram.com/umidjon.0528/"
+      },
+      {
+        "name": "Telegram",
+        "icon": "📱",
+        "url": "https://t.me/umid_web"
+      },
+      {
+        "name": "YouTube",
+        "icon": "▶️",
+        "url": "https://youtube.com"
+      },
+      {
+        "name": "Facebook",
+        "icon": "📘",
+        "url": "https://facebook.com"
+      }
+    ],
 
-  "phone": "+998 90 123 45 67",
-  "email": "info@ieltscenter.uz",
-  "copyright": "© 2026 Barcha huquqlar himoyalangan"
-},
-
-
-
+    "phone": "+998 90 123 45 67",
+    "email": "info@ieltscenter.uz",
+    "copyright": "© 2026 Barcha huquqlar himoyalangan"
+  },
 
   "hero": {
     "title": "INGLIZ TILINI <span>PROFESSIONAL</span> DARAJADA O‘RGANING",
@@ -88,9 +85,6 @@
     ]
   },
 
-
-
-
   "trust": {
     "title": "Bizning natijalar raqamlarda",
     "items": [
@@ -116,9 +110,6 @@
       }
     ]
   },
-
-
-
 
   "placementTest": {
     "title": "Boshlangʻich Darajangizni Tekshiring",
@@ -147,9 +138,7 @@
     ]
   },
 
-
-
-   "ieltsResults": {
+  "ieltsResults": {
     "title": "SERTIFIKAT NATIJALARI",
     "students": [
       {
@@ -209,35 +198,29 @@
     ]
   },
 
-
-
-"consultation": {
-  "title": "IELTS va Ingliz Tilida Yuqori Natijalarga Erishishga Tayyormisiz?",
-  "description": "Tajribali mentorlar, zamonaviy metodika va natijaga yo‘naltirilgan dasturlar yordamida ingliz tilini qisqa muddatda ishonch bilan o‘zlashtiring.",
-  "highlight": "🎁 Bepul daraja aniqlash testi va individual o‘quv rejasi",
-  "phones": [
-    "+998 90 160 05 28",
-    "+998 90 160 05 28"
-  ],
-  "form": {
-    "namePlaceholder": "Ismingizni kiriting",
-    "phonePlaceholder": "Telefon raqamingiz",
-    "button": "Bepul konsultatsiya olish"
-  },
-  "steps": [
-    {
-      "icon": "🎯",
-      "title": "Aniq maqsad va strategiya",
-      "desc": "Darajangiz tahlil qilinadi va maqsadingizga mos shaxsiy o‘quv reja tuziladi."
+  "consultation": {
+    "title": "IELTS va Ingliz Tilida Yuqori Natijalarga Erishishga Tayyormisiz?",
+    "description": "Tajribali mentorlar, zamonaviy metodika va natijaga yo‘naltirilgan dasturlar yordamida ingliz tilini qisqa muddatda ishonch bilan o‘zlashtiring.",
+    "highlight": "🎁 Bepul daraja aniqlash testi va individual o‘quv rejasi",
+    "phones": ["+998 90 160 05 28", "+998 90 160 05 28"],
+    "form": {
+      "namePlaceholder": "Ismingizni kiriting",
+      "phonePlaceholder": "Telefon raqamingiz",
+      "button": "Bepul konsultatsiya olish"
     },
-    {
-      "icon": "🚀",
-      "title": "Tezkor natija",
-      "desc": "IELTS, CEFR va General English bo‘yicha natijalaringizni sezilarli darajada oshiring."
-    }
-  ]
-},
-
+    "steps": [
+      {
+        "icon": "🎯",
+        "title": "Aniq maqsad va strategiya",
+        "desc": "Darajangiz tahlil qilinadi va maqsadingizga mos shaxsiy o‘quv reja tuziladi."
+      },
+      {
+        "icon": "🚀",
+        "title": "Tezkor natija",
+        "desc": "IELTS, CEFR va General English bo‘yicha natijalaringizni sezilarli darajada oshiring."
+      }
+    ]
+  },
 
   "about": {
     "hero": {
@@ -251,17 +234,39 @@
       "quote": "O‘zbekiston yoshlarini dunyoning istalgan universitetida o‘qishga va xalqaro miqyosda muvaffaqiyat qozonishga tayyorlash."
     },
     "values": [
-      { "icon": "🎯", "title": "Natijaga yo‘naltirilganlik", "desc": "Har bir talabamiz aniq maqsad sari harakat qiladi." },
-      { "icon": "👤", "title": "Shaxsiy yondashuv", "desc": "Dasturlar sizning darajangiz va ehtiyojlaringizga moslangan." },
-      { "icon": "📚", "title": "Zamonaviy metodika", "desc": "Faqat isbotlangan va samarali o‘qitish usullari." },
-      { "icon": "🤝", "title": "Shaffoflik va ishonch", "desc": "Ota-onalar va talabalar bilan ochiq muloqot." }
+      {
+        "icon": "🎯",
+        "title": "Natijaga yo‘naltirilganlik",
+        "desc": "Har bir talabamiz aniq maqsad sari harakat qiladi."
+      },
+      {
+        "icon": "👤",
+        "title": "Shaxsiy yondashuv",
+        "desc": "Dasturlar sizning darajangiz va ehtiyojlaringizga moslangan."
+      },
+      {
+        "icon": "📚",
+        "title": "Zamonaviy metodika",
+        "desc": "Faqat isbotlangan va samarali o‘qitish usullari."
+      },
+      {
+        "icon": "🤝",
+        "title": "Shaffoflik va ishonch",
+        "desc": "Ota-onalar va talabalar bilan ochiq muloqot."
+      }
     ],
     "directions": [
-      { "name": "IELTS tayyorlov kurslari", "desc": "Umumiy va akademik modul" },
+      {
+        "name": "IELTS tayyorlov kurslari",
+        "desc": "Umumiy va akademik modul"
+      },
       { "name": "General English", "desc": "A1 dan C1 darajagacha" },
       { "name": "CEFR sertifikatiga tayyorlov", "desc": "Xalqaro standart" },
       { "name": "Suhbat va intervyu", "desc": "Ingliz tilida" },
-      { "name": "Korporativ ingliz tili", "desc": "Kompaniyalar va tashkilotlar uchun" },
+      {
+        "name": "Korporativ ingliz tili",
+        "desc": "Kompaniyalar va tashkilotlar uchun"
+      },
       { "name": "Onlayn ta’lim platformasi", "desc": "24/7 rejimda" }
     ],
     "goal": {
@@ -276,9 +281,6 @@
     ]
   },
 
-
-
-
   "teachersPage": {
     "badge": "Bizning jamoa",
     "title": "Tajribali ustozlar",
@@ -292,7 +294,11 @@
       "result": "IELTS 8.5",
       "experience": "10+ yil",
       "subjects": ["IELTS Academic", "General English", "Speaking"],
-      "achievements": ["300+ talaba IELTS 7.0+", "Sertifikatlangan examiner", "Best Teacher 2023"],
+      "achievements": [
+        "300+ talaba IELTS 7.0+",
+        "Sertifikatlangan examiner",
+        "Best Teacher 2023"
+      ],
       "rating": 4.9,
       "bio": "Sarvar akam 10 yildan ortiq tajribaga ega bo‘lib, 500 dan ortiq talabalarni IELTS imtihoniga tayyorlagan."
     },
@@ -303,7 +309,11 @@
       "result": "CEFR C2",
       "experience": "8 yil",
       "subjects": ["General English", "Business English", "Writing"],
-      "achievements": ["200+ talaba C1 darajaga chiqqan", "Cambridge sertifikati", "Eng yaxshi mentor 2022"],
+      "achievements": [
+        "200+ talaba C1 darajaga chiqqan",
+        "Cambridge sertifikati",
+        "Eng yaxshi mentor 2022"
+      ],
       "rating": 4.8,
       "bio": "Dilnoza xonim nafaqat ingliz tili, balki biznes ingliz tiliga ixtisoslashgan."
     },
@@ -314,7 +324,11 @@
       "result": "IELTS 8.0",
       "experience": "6 yil",
       "subjects": ["IELTS General", "Reading", "Vocabulary"],
-      "achievements": ["100+ talaba Reading 8.0+", "Eng yaxshi yosh ustoz 2024", "O‘z metodikasini yaratgan"],
+      "achievements": [
+        "100+ talaba Reading 8.0+",
+        "Eng yaxshi yosh ustoz 2024",
+        "O‘z metodikasini yaratgan"
+      ],
       "rating": 4.7,
       "bio": "Jasur juda energik va zamonaviy yondashuvga ega."
     },
@@ -325,7 +339,11 @@
       "result": "IELTS 8.5",
       "experience": "12 yil",
       "subjects": ["IELTS Academic", "Writing", "Grammar"],
-      "achievements": ["400+ talaba Writing 7.0+", "IELTS examiner", "Pedagogika fanlari nomzodi"],
+      "achievements": [
+        "400+ talaba Writing 7.0+",
+        "IELTS examiner",
+        "Pedagogika fanlari nomzodi"
+      ],
       "rating": 5.0,
       "bio": "Gulnora opa eng tajribali ustozlarimizdan biri bo‘lib, ayniqsa writing qismiga ixtisoslashgan."
     },
@@ -336,7 +354,11 @@
       "result": "IELTS 8.0",
       "experience": "7 yil",
       "subjects": ["IELTS General", "Listening", "Vocabulary"],
-      "achievements": ["300+ talaba Listening 8.0+", "Eng yaxshi yosh ustoz 2024", "O‘z metodikasini yaratgan"],
+      "achievements": [
+        "300+ talaba Listening 8.0+",
+        "Eng yaxshi yosh ustoz 2024",
+        "O‘z metodikasini yaratgan"
+      ],
       "rating": 4.6,
       "bio": "Sardor opa ingliz tili o‘qitishda 7 yildan ortiq tajriba bilan."
     },
@@ -347,16 +369,17 @@
       "result": "IELTS 7.5",
       "experience": "9 yil",
       "subjects": ["IELTS Academic", "Writing", "Grammar"],
-      "achievements": ["350+ talaba Writing 7.0+", "IELTS examiner", "Pedagogika fanlari nomzodi"],
+      "achievements": [
+        "350+ talaba Writing 7.0+",
+        "IELTS examiner",
+        "Pedagogika fanlari nomzodi"
+      ],
       "rating": 4.9,
       "bio": "Nilufar opa ingliz tili o‘qitishda 9 yildan ortiq tajriba bilan."
     }
-
   ],
 
-
-
-   "courses": [
+  "courses": [
     {
       "id": 1,
       "title": "General English",
@@ -434,13 +457,7 @@
     }
   ],
 
-
-
-
-
-
-
-    "testSettings": {
+  "testSettings": {
     "questionCounts": [10, 15, 20, 25]
   },
 
@@ -489,7 +506,7 @@
       "id": 2,
       "type": "grammar",
       "question": "I ___ TV yesterday.",
-      "options": ["watch", "watched", "watching", "watches"],
+      "options": ["watch", "watched", "watching", "watchies"],
       "answer": "watched"
     },
     {
@@ -513,21 +530,21 @@
       "options": ["Travel", "Food", "Education", "Sports"],
       "answer": "Education"
     },
-      {
-        "id": 6,
-        "type": "listening",
-        "question": "Listen to the audio and answer the question: What time is the meeting scheduled for?",
-        "options": ["10 AM", "2 PM", "4 PM", "6 PM"],
-        "answer": "2 PM"
-      },
-{
+    {
+      "id": 6,
+      "type": "listening",
+      "question": "Listen to the audio and answer the question: What time is the meeting scheduled for?",
+      "options": ["10 AM", "2 PM", "4 PM", "6 PM"],
+      "answer": "2 PM"
+    },
+    {
       "id": 7,
       "type": "grammar",
       "question": "He ___ a book right now.",
       "options": ["reads", "read", "is reading", "reading"],
       "answer": "is reading"
     },
-     {
+    {
       "id": 8,
       "type": "grammar",
       "question": "They ___ to the park every Sunday.",
@@ -549,12 +566,4 @@
       "answer": "Beach"
     }
   ]
-
-
-
-
-
-
-
-
 }
