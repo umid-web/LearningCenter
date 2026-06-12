@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import './Navbar.scss';
-import db from '../../../db.json';
+import db from '../../../public/db.json';
 import RegistrationModal from '../../Components/RegistrationModal/RegistrationModal';
 
 const Navbar = () => {
