@@ -76,11 +76,11 @@
     }
 
     img {
-      width: 150px;
-      height: auto;
+      width: 170px;
       display: block;
-      object-fit: cover;
+      object-fit: contain;
       transition: all 0.3s;
+      transform: scale(1.1);
     }
 
     @include desktop-md { img { width: 130px; } }

@@ -28,7 +28,6 @@ const Aboute = () => {
 
         {/* Mission */}
         <div className="about__mission">
-          <div className="about__mission-icon">🎯</div>
           <h2 className="about__mission-title">{data.mission.title}</h2>
           <p className="about__mission-desc">{data.mission.description}</p>
           <blockquote className="about__mission-quote">“{data.mission.quote}”</blockquote>

@@ -1,10 +1,11 @@
 {
   "navbar": {
-    "logo": "https://picsum.photos/200/50"
+    "logo": "src/Images/wallstreet logo-02-01.png",
+    "logoDark": "src/Images/wallstreet logo-3-01.png"
   },
 
   "footer": {
-    "logo": "https://picsum.photos/200/50",
+    "logo": "src/Images/wallstreet logo-3-01.png",
 
     "links": [
       {
@@ -225,59 +226,88 @@
   "about": {
     "hero": {
       "badge": "Biz haqimizda",
-      "title": "Kelajak avlodni <span>sifatli ta’lim</span> orqali dunyoga tanitamiz",
-      "description": "Lingua Academy — bu nafaqat ingliz tili kursi, balki o‘z o‘quvchilarini xalqaro darajada raqobatbardosh, zamonaviy va mustaqil fikrlaydigan shaxs sifatida shakllantiradigan kuchli ta’lim muassasasidir."
+      "title": "Bilim orqali <span>cheksiz imkoniyatlar</span> sari birgalikda qadam tashlaymiz",
+      "description": "Wall Street learning center — zamonaviy ta'lim markazi bo'lib, har bir o'quvchining salohiyatini kashf etish, ingliz tilini mukammal o'rgatish va xalqaro maydonda erkin raqobatlasha oladigan shaxsni tarbiyalashni o'z oldiga maqsad qilib qo'ygan. Biz uchun ta'lim — bu shunchaki dars emas, balki muvaffaqiyat sari boshlanadigan hayot yo'lidir."
     },
+
     "mission": {
-      "title": "Missiyamiz",
-      "description": "Har bir o‘zbek yoshining imkoniyatlarini kengaytirish, unga jahon standartlariga mos bilim va ko‘nikmalarni yetkazish.",
-      "quote": "O‘zbekiston yoshlarini dunyoning istalgan universitetida o‘qishga va xalqaro miqyosda muvaffaqiyat qozonishga tayyorlash."
+      "title": "Bizning intilishimiz",
+      "description": "Har bir o'quvchiga xalqaro standartlarga mos, sifatli va innovatsion ta'lim berish orqali uning salohiyatini to'liq namoyon etish hamda yorqin kelajak sari ishonch bilan yetaklash.",
+      "quote": "«Bugungi bilim — ertangi muvaffaqiyatning eng mustahkam poydevoridir.»"
     },
+
     "values": [
       {
         "icon": "🎯",
-        "title": "Natijaga yo‘naltirilganlik",
-        "desc": "Har bir talabamiz aniq maqsad sari harakat qiladi."
+        "title": "Aniq natija",
+        "desc": "Har bir dars o'quvchini o'z maqsadiga bir qadam yaqinlashtiradi."
       },
       {
-        "icon": "👤",
-        "title": "Shaxsiy yondashuv",
-        "desc": "Dasturlar sizning darajangiz va ehtiyojlaringizga moslangan."
-      },
-      {
-        "icon": "📚",
-        "title": "Zamonaviy metodika",
-        "desc": "Faqat isbotlangan va samarali o‘qitish usullari."
+        "icon": "💡",
+        "title": "Innovatsion yondashuv",
+        "desc": "Zamonaviy metodika, interaktiv darslar va xalqaro tajribaga asoslangan ta'lim."
       },
       {
         "icon": "🤝",
-        "title": "Shaffoflik va ishonch",
-        "desc": "Ota-onalar va talabalar bilan ochiq muloqot."
+        "title": "Individual e'tibor",
+        "desc": "Har bir o'quvchining bilim darajasi va maqsadiga mos o'qitish tizimi."
+      },
+      {
+        "icon": "🏆",
+        "title": "Yuqori natijalar",
+        "desc": "IELTS, CEFR va boshqa xalqaro imtihonlarda yuqori natijalarga erishishga yo'naltirilgan ta'lim."
       }
     ],
+
     "directions": [
       {
-        "name": "IELTS tayyorlov kurslari",
-        "desc": "Umumiy va akademik modul"
+        "name": "📖 Beginner & Foundation",
+        "desc": "Ingliz tilini noldan ishonch bilan o'rganing."
       },
-      { "name": "General English", "desc": "A1 dan C1 darajagacha" },
-      { "name": "CEFR sertifikatiga tayyorlov", "desc": "Xalqaro standart" },
-      { "name": "Suhbat va intervyu", "desc": "Ingliz tilida" },
       {
-        "name": "Korporativ ingliz tili",
-        "desc": "Kompaniyalar va tashkilotlar uchun"
+        "name": "🌟 General English",
+        "desc": "A1 dan C1 darajagacha mukammal rivojlanish."
       },
-      { "name": "Onlayn ta’lim platformasi", "desc": "24/7 rejimda" }
+      {
+        "name": "🎓 Pre-IELTS",
+        "desc": "IELTS sari ilk va eng muhim qadam."
+      },
+      {
+        "name": "🏅 IELTS",
+        "desc": "Yuqori ball va xalqaro imkoniyatlar sari tayyorgarlik."
+      },
+      {
+        "name": "📜 CEFR",
+        "desc": "Milliy va xalqaro sertifikat uchun professional tayyorgarlik."
+      },
+      {
+        "name": "💻 Online Lessons",
+        "desc": "Istalgan joydan jonli va qulay ta'lim."
+      }
     ],
+
     "goal": {
-      "title": "Maqsadimiz",
-      "text": "O‘zbekiston ta’lim tizimini xalqaro standartlarga to‘liq moslashtirish va ingliz tilini o‘rganishni hamma uchun qulay hamda samarali jarayonga aylantirish."
+      "title": "Bizning maqsadimiz",
+      "text": "Har bir o'quvchini ingliz tilida erkin muloqot qila oladigan, xalqaro sertifikatlarga ega va global imkoniyatlardan foydalana oladigan yetuk shaxs sifatida shakllantirish.Wall Street learning center nafaqat til o'rgatadi, balki kelajak uchun mustahkam poydevor yaratadi."
     },
+
     "stats": [
-      { "number": "10+", "label": "Yillik tajriba" },
-      { "number": "5000+", "label": "Bitiruvchi" },
-      { "number": "50+", "label": "Tajribali ustoz" },
-      { "number": "6", "label": "Yo‘nalish" }
+      {
+        "number": "1000+",
+        "label": "😊 Mamnun o'quvchilar"
+      },
+      {
+        "number": "100+",
+        "label": "🏅 Xalqaro sertifikat egalari"
+      },
+      {
+        "number": "10+",
+        "label": "👨‍🏫 Professional ustozlar"
+      },
+      {
+        "number": "6",
+        "label": "📚 Zamonaviy kurs yo'nalishlari"
+      }
     ]
   },
 
@@ -382,77 +412,86 @@
   "courses": [
     {
       "id": 1,
-      "title": "General English",
-      "level": "A1-B1",
-      "duration": "3 oy",
-      "icon": "📘",
-      "price": "1 200 000 so‘m",
-      "fullDescription": "Ushbu kurs boshlang‘ich va o‘rta darajadagi o‘quvchilar uchun mo‘ljallangan. Darslar grammatika, so‘z boyligi, tinglab tushunish va gapirish ko‘nikmalariga qaratilgan. Kurs yakunida siz kundalik mavzularda bemalol suhbatlasha olasiz.",
+      "title": "Beginner",
+      "level": "A1-A2",
+      "duration": "2 oy",
+      "price": "400 000 so‘m",
+      "fullDescription": "Beginner kursi ingliz tilini endi o‘rganishni boshlayotgan o‘quvchilar uchun mo‘ljallangan. Kurs davomida alifbo, asosiy grammatika, kundalik suhbatlar va eng ko‘p ishlatiladigan so‘zlar o‘rgatiladi. Kurs yakunida o‘quvchi oddiy mavzularda bemalol muloqot qila oladi.",
       "curriculum": [
-        "Present tenses & vocabulary",
-        "Past tenses & storytelling",
-        "Future forms & plans",
-        "Listening & speaking practice"
+        "English alphabet & pronunciation",
+        "Basic grammar (Present, Past, Future)",
+        "Daily conversation",
+        "Essential vocabulary"
       ]
     },
     {
       "id": 2,
-      "title": "IELTS Preparation",
-      "level": "B2-C1",
-      "duration": "4 oy",
-      "icon": "🎓",
-      "price": "1 800 000 so‘m",
-      "fullDescription": "IELTS imtihoniga tayyorlov kursi. 4 ta bo‘lim (Listening, Reading, Writing, Speaking) bo‘yicha intensiv mashg‘ulotlar, haftalik mock testlar va individual feedback.",
+      "title": "Foundation",
+      "level": "A2-B1",
+      "duration": "2 oy",
+      "price": "400 000 so‘m",
+      "fullDescription": "Foundation kursi boshlang‘ich bilimga ega o‘quvchilar uchun mo‘ljallangan. Kursda grammatika mustahkamlanadi, lug‘at boyligi kengaytiriladi hamda o‘qish, tinglash, yozish va gapirish ko‘nikmalari rivojlantiriladi.",
       "curriculum": [
-        "Listening strategies",
-        "Reading speed & techniques",
-        "Writing task 1 & 2",
-        "Speaking mock interviews"
+        "Intermediate grammar",
+        "Reading comprehension",
+        "Listening practice",
+        "Speaking & writing skills"
       ]
     },
     {
       "id": 3,
-      "title": "Business English",
-      "level": "B1-C1",
-      "duration": "2.5 oy",
-      "icon": "💼",
-      "price": "1 500 000 so‘m",
-      "fullDescription": "Ishbilarmonlik ingliz tili: muzokaralar, prezentatsiyalar, biznes yozishmalar va telefon suhbatlari. Kurs oxirida sertifikat va portfolio.",
+      "title": "Pre-IELTS",
+      "level": "B1-C2",
+      "duration": "3 oy",
+      "price": "400 000 so‘m",
+      "fullDescription": "Pre-IELTS kursi IELTS imtihoniga tayyorgarlikni boshlayotgan o‘quvchilar uchun mo‘ljallangan. Kurs davomida barcha 4 ta ko‘nikma rivojlantiriladi va IELTS formatiga mos mashqlar bajariladi.",
       "curriculum": [
-        "Negotiations & presentations",
-        "Business correspondence",
-        "Telephone etiquette",
-        "Company culture & meetings"
+        "IELTS Listening basics",
+        "Reading strategies",
+        "Writing Task 1 & Task 2 introduction",
+        "Speaking practice"
       ]
     },
     {
       "id": 4,
-      "title": "Kids English",
-      "level": "A1-A2",
-      "duration": "6 oy",
-      "icon": "🧸",
-      "price": "900 000 so‘m",
-      "fullDescription": "Bolalar uchun o‘yin asosida ingliz tili. 7-12 yoshli bolalar uchun maxsus dastur, interaktiv darslar, qo‘shiqlar va videolar.",
+      "title": "IELTS",
+      "level": "B2-C2",
+      "duration": "4-6 oy",
+      "price": "400 000 so‘m",
+      "fullDescription": "IELTS kursi xalqaro IELTS imtihonida yuqori natijaga erishishni maqsad qilgan o‘quvchilar uchun mo‘ljallangan. Kurs davomida imtihon strategiyalari, vaqtni boshqarish va real testlar bilan ishlanadi.",
       "curriculum": [
-        "Alphabet & phonics",
-        "Basic vocabulary through games",
-        "Simple sentences",
-        "Songs and stories"
+        "Advanced Listening",
+        "Advanced Reading",
+        "Writing Task 1 & Task 2",
+        "Mock Speaking & full mock exams"
       ]
     },
     {
       "id": 5,
-      "title": "Academic English",
+      "title": "CEFR",
       "level": "B2-C1",
-      "duration": "3 oy",
-      "icon": "📚",
-      "price": "1 700 000 so‘m",
-      "fullDescription": "Akademik ingliz tili: ilmiy maqolalar, taqdimotlar, akademik yozishmalar va tadqiqot metodologiyasi. Kurs oxirida sertifikat va portfolio.",
+      "duration": "4 oy",
+      "price": "400 000 so‘m",
+      "fullDescription": "CEFR kursi milliy va xalqaro CEFR imtihonlariga tayyorlanish uchun mo‘ljallangan. Kursda grammatika, akademik lug‘at, tinglab tushunish, o‘qish va yozish ko‘nikmalari CEFR standartlari asosida rivojlantiriladi.",
       "curriculum": [
-        "Academic reading strategies",
-        "Essay writing & research papers",
-        "Presentation skills",
-        "Academic vocabulary"
+        "CEFR grammar review",
+        "Academic vocabulary",
+        "Listening & Reading practice",
+        "Writing and Speaking assessment"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "ONLINE LESSON",
+      "level": "A1-C1",
+      "duration": "-",
+      "price": "300 000 so‘m",
+      "fullDescription": "Online Lesson kursi internet orqali qulay va zamonaviy usulda ingliz tilini o‘rganishni istagan o‘quvchilar uchun mo‘ljallangan. Darslar Zoom yoki Google Meet platformalari orqali tajribali o‘qituvchilar tomonidan olib boriladi. Kurs davomida grammatika, lug‘at boyligi, tinglab tushunish, o‘qish va gapirish ko‘nikmalari o‘quvchining darajasiga mos ravishda rivojlantiriladi.",
+      "curriculum": [
+        "Live online lessons",
+        "Grammar & vocabulary",
+        "Listening and speaking practice",
+        "Homework with teacher feedback"
       ]
     }
   ],

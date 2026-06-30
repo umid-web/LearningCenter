@@ -69,7 +69,7 @@ function Courses() {
           {courses.map((course) => (
             <div className="course-card" key={course.id}>
               <div className="course-card__icon-wrapper">
-                <div className="course-card__icon">{course.icon}</div>
+                <div className="course-card__icon">{course.duration}</div>
               </div>
               <h3>{course.title}</h3>
               <div className="course-card__meta">
@@ -96,7 +96,7 @@ function Courses() {
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={closeModal}>✕</button>
-            <div className="modal-icon">{selectedCourse.icon}</div>
+            <div className="modal-icon">{selectedCourse.duration}</div>
             <h2 className="modal-title">{selectedCourse.title}</h2>
             <div className="modal-meta">
               <span>📊 Daraja: {selectedCourse.level}</span>

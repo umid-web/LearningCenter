@@ -7,26 +7,39 @@ import RegistrationModal from '../../Components/RegistrationModal/RegistrationMo
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
   const [darkMode, setDarkMode] = useState(() => {
     const saved = localStorage.getItem('theme');
     if (saved) return saved === 'dark';
     return window.matchMedia('(prefers-color-scheme: dark)').matches;
   });
+
   const [showRegModal, setShowRegModal] = useState(false);
 
+  // Scroll
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
+  // Body scroll lock
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
-    return () => (document.body.style.overflow = '');
+
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, [menuOpen]);
 
+  // Theme
   useEffect(() => {
     const root = document.documentElement;
+
     if (darkMode) {
       root.classList.add('dark');
       localStorage.setItem('theme', 'dark');
@@ -36,50 +49,100 @@ const Navbar = () => {
     }
   }, [darkMode]);
 
+  // Open registration modal
   useEffect(() => {
     const handleOpenRegistrationModal = () => {
-      console.log('openRegistrationModal event received');
       setShowRegModal(true);
     };
 
-    window.addEventListener('openRegistrationModal', handleOpenRegistrationModal);
+    window.addEventListener(
+      'openRegistrationModal',
+      handleOpenRegistrationModal
+    );
 
     return () => {
-      window.removeEventListener('openRegistrationModal', handleOpenRegistrationModal);
+      window.removeEventListener(
+        'openRegistrationModal',
+        handleOpenRegistrationModal
+      );
     };
   }, []);
 
-  const toggleDarkMode = () => setDarkMode(!darkMode);
-  const openRegistration = () => setShowRegModal(true);
-  const closeRegistration = () => setShowRegModal(false);
+  const toggleDarkMode = () => {
+    setDarkMode((prev) => !prev);
+  };
+
+  const openRegistration = () => {
+    setShowRegModal(true);
+  };
+
+  const closeRegistration = () => {
+    setShowRegModal(false);
+  };
 
   return (
     <>
       <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
         <div className="navbar__container">
-          <Link to="/" className="navbar__logo" onClick={() => setMenuOpen(false)}>
-            {db.navbar?.logo && <img src={db.navbar.logo} alt="O'QUV MARKAZ" />}
+          {/* LOGO */}
+          <Link
+            to="/"
+            className="navbar__logo"
+            onClick={() => setMenuOpen(false)}
+          >
+            <img
+              src={darkMode ? db.navbar.logoDark : db.navbar.logo}
+              alt="O'QUV MARKAZ"
+            />
           </Link>
 
-          <nav className={`navbar__menu ${menuOpen ? 'navbar__menu--active' : ''}`}>
-            <NavLink to="/about" onClick={() => setMenuOpen(false)}>Biz haqimizda</NavLink>
-            <NavLink to="/teachers" onClick={() => setMenuOpen(false)}>O‘qituvchilar</NavLink>
-            <NavLink to="/courses" onClick={() => setMenuOpen(false)}>Kurslar</NavLink>
-            {/* Dark mode toggle inside menu on mobile */}
-            <button className="navbar__mobile-theme-toggle" onClick={toggleDarkMode}>
+          {/* MENU */}
+          <nav
+            className={`navbar__menu ${
+              menuOpen ? 'navbar__menu--active' : ''
+            }`}
+          >
+            <NavLink to="/about" onClick={() => setMenuOpen(false)}>
+              Biz haqimizda
+            </NavLink>
+
+            <NavLink to="/teachers" onClick={() => setMenuOpen(false)}>
+              O‘qituvchilar
+            </NavLink>
+
+            <NavLink to="/courses" onClick={() => setMenuOpen(false)}>
+              Kurslar
+            </NavLink>
+
+            {/* Mobile theme button */}
+            <button
+              className="navbar__mobile-theme-toggle"
+              onClick={toggleDarkMode}
+            >
               {darkMode ? '☀️' : '🌙'}
             </button>
           </nav>
 
+          {/* ACTIONS */}
           <div className="navbar__actions">
-            <button className="navbar__theme-toggle" onClick={toggleDarkMode}>
+            <button
+              className="navbar__theme-toggle"
+              onClick={toggleDarkMode}
+            >
               {darkMode ? '☀️' : '🌙'}
             </button>
-            <button className="navbar__btn" onClick={openRegistration}>
+
+            <button
+              className="navbar__btn"
+              onClick={openRegistration}
+            >
               <span>Bog‘lanish</span>
             </button>
+
             <button
-              className={`navbar__burger ${menuOpen ? 'navbar__burger--open' : ''}`}
+              className={`navbar__burger ${
+                menuOpen ? 'navbar__burger--open' : ''
+              }`}
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Menu"
             >

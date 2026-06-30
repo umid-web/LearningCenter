@@ -42,6 +42,7 @@ const Hero = () => {
   const [showVideo, setShowVideo] = useState(false) // controls video visibility
 
   const abortControllerRef = useRef(null)
+  const videoRef = useRef(null) // Video elementini ushlab turish uchun ref
 
   // FETCH DATA
   const fetchHero = useCallback(async () => {
@@ -77,6 +78,31 @@ const Hero = () => {
     })()
     return () => abortControllerRef.current?.abort()
   }, [fetchHero])
+
+  // SCROLL KUZATUVCHI EFFECT (Intersection Observer)
+  useEffect(() => {
+    // Agar video yoqilmagan bo'lsa yoki video elementi hali yuklanmagan bo'lsa, kuzatmaymiz
+    if (!showVideo || !videoRef.current) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Agar video ekrandan chiqib ketsa (isIntersecting false bo'lsa) uni pauza qilamiz
+        if (!entry.isIntersecting && videoRef.current) {
+          videoRef.current.pause()
+        }
+      },
+      {
+        threshold: 0.1, // Videoning 10% qismi ko'rinmay qolsa, effekt ishga tushadi
+      }
+    )
+
+    observer.observe(videoRef.current)
+
+    // Komponent o'chganda (unmount) kuzatuvchini tozalaymiz
+    return () => {
+      observer.disconnect()
+    }
+  }, [showVideo])
 
   // ANIMATIONS
   const containerVariants = {
@@ -121,8 +147,8 @@ const Hero = () => {
     // 1. VIDEO (when play button clicked and no error)
     if (videoUrl && showVideo && !videoError) {
       return (
-        // renderMedia funksiyasidagi video elementi
         <video
+          ref={videoRef} // Ref shu yerga ulandi
           src={videoUrl}
           autoPlay
           controls // ovozni boshqarish paneli
@@ -239,24 +265,24 @@ const Hero = () => {
 
           <motion.div className="hero__buttons" variants={itemVariants}>
             {buttons?.map((btn, i) => {
-              // Second button is always the register button based on db.json structure
-              const isRegisterButton = i === 1;
+              const isRegisterButton = i === 1
 
               if (isRegisterButton) {
                 return (
                   <button
                     key={i}
                     onClick={(e) => {
-                      e.preventDefault();
-                      console.log('Register button clicked, dispatching event');
-                      // Dispatch custom event to open registration modal
-                      window.dispatchEvent(new CustomEvent('openRegistrationModal'));
+                      e.preventDefault()
+                      console.log('Register button clicked, dispatching event')
+                      window.dispatchEvent(
+                        new CustomEvent('openRegistrationModal')
+                      )
                     }}
                     className={`hero__btn hero__btn--${i === 0 ? 'primary' : 'secondary'}`}
                   >
                     {btn.text}
                   </button>
-                );
+                )
               }
 
               return (
@@ -267,7 +293,7 @@ const Hero = () => {
                 >
                   {btn.text}
                 </a>
-              );
+              )
             })}
           </motion.div>
         </motion.div>
